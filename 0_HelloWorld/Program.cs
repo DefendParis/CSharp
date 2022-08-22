@@ -28,13 +28,12 @@ if (answer == "no")
 
 else if (answer == "yes")
 {
-    text("Let's go deeper then");
+    text("\nLet's go deeper then");
 }
 else
 {
     text("okay");
 }
 
-
-text("Do you want to know about the things keeping an eye on you?");
-Console.ReadLine;
+text("\So you want to know about the things keeping an eye on you?");
+Console.ReadLine();
