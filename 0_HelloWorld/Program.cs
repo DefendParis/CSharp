@@ -1,9 +1,40 @@
 ﻿//Change appearance of Console
 Console.Title = "Matrix";
 Console.ForegroundColor = ConsoleColor.DarkGreen;
-Console.WindowHeight = 40;
+
+void text(string text, int time = 35)
+{
+    foreach (char c in text)
+    {
+        Console.Write(c);
+        Thread.Sleep(time);
+    }
+}
 
 //Presentation
-Console.WriteLine("Hello Chosen One");
-Console.WriteLine("Where is our next adventure?");
+
+text("Hello Chosen One");
+
+
+text("\nDo you wanna go on an adventure? \n");
+
 string answer = Console.ReadLine();
+
+if (answer == "no")
+{
+    text("Okay then");
+    Thread.Sleep(500);
+}
+
+else if (answer == "yes")
+{
+    text("Let's go deeper then");
+}
+else
+{
+    text("okay");
+}
+
+
+text("Do you want to know about the things keeping an eye on you?");
+Console.ReadLine;
