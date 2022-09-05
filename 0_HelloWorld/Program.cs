@@ -11,7 +11,19 @@ void text(string text, int time = 20)
         Thread.Sleep(time);
     }
 }
-//This void is for writing one character at a time
+
+void text1(string text, int time = 1)
+{
+    foreach (char c in text)
+    {
+        Console.Write(c);
+        Thread.Sleep(time);
+    }
+}
+
+//These voids is for writing one character at a time at differnt speeds
+
+goto test;
 
 text("Hello Chosen One");
 
@@ -102,15 +114,48 @@ while(loop) {
 
 #region third clear
 
-Console.WriteLine("So the Matrix have found us, you will have to roll a dice");
-Console.ReadLine();
+test:
 
-Console.WriteLine("If you roll a six, i can get you safely away. Any other number i can't guarantee your safety:\n");
+text("So the Matrix have found us, now you will have to roll a dice\n");
+Thread.Sleep(200);
+text("\nIf you roll a six, i can get you safely away. Any other number i can't guarantee your safety\n");
+Thread.Sleep(200);
+text("\nSo lets see if the program wants you dead or alive\n");
+Thread.Sleep(500);
+Console.Clear();
 
 Random rd= new Random();
 
-int rand_rum = rd.Next(1,6);
+int rand_rum = rd.Next(1,7);
 
-Console.WriteLine(rand_rum);
-Console.ReadLine();
+        Console.WriteLine("-----------------");
+        Console.WriteLine("|               |");
+        Console.WriteLine("|               |");
+        Console.WriteLine("|               |");
+        Console.WriteLine("-----------------");
+    Console.SetCursorPosition(8, 2);
+
+    Console.WriteLine(rand_rum);
+    Console.SetCursorPosition(0, 6);
+    
+if (rand_rum == 6)
+    {
+        text("\nWell the computer really like you huh\n");
+        Thread.Sleep(400);
+    }
+else 
+    {
+        text("Well i wish you good luck on your journey");
+        count = 0;
+        loop = true;
+            while(loop) {
+            if(count == 250) {
+        loop = false;
+            }
+        else {
+        count++;
+            text1("\nGood Luck");
+    }
+}
+    }
 #endregion
