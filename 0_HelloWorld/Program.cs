@@ -1,9 +1,22 @@
-﻿//Change appearance of Console
-Console.Title = "Matrix";
-Console.ForegroundColor = ConsoleColor.DarkGreen;
-Console.WindowHeight = 40;
+﻿
+CarDealer dealer = new CarDealer(); //This class you need to create yourself!
+while(true){
 
-//Presentation
-Console.WriteLine("Hello Chosen One");
-Console.WriteLine("Where is our next adventure?");
-string answer = Console.ReadLine();
+    Console.WriteLine("Write an action [buy, sell, exit]");
+    string input = Console.ReadLine();
+
+    switch (input)
+    {
+        case "buy":
+            Car firstCar = dealer.AvailableCars[0];
+            Car myNewCar = dealer.Buy(firstCar);
+            Console.WriteLine("My first car cost " + myNewCar.Price);
+            break;
+        case "sell":
+            break;
+        case "exit":
+            return;
+        default:
+            break;
+    }
+}
