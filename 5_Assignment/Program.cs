@@ -1,6 +1,4 @@
-﻿//Un-comment below code and fix the issues
-//Push to github
-
+﻿
 int RecursiveFibonacci(int first, int second, int count)
 {
     count --;
@@ -14,7 +12,7 @@ int RecursiveFibonacci(int first, int second, int count)
     if(count == 0) {
     return nextnumber;
     }else{
-        return RecursiveFibonacci(1, 1, 2);
+        return RecursiveFibonacci(first, second, count);
     }
 }
 
