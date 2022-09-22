@@ -6,9 +6,13 @@ int RecursiveFibonacci(int first, int second, int count)
     count --;
 
     int nextnumber = first + second;
-    
+
+    first=second;
+
+    second=nextnumber;
+
     if(count == 0) {
-    
+    return nextnumber;
     }else{
         return RecursiveFibonacci(1, 1, 2);
     }
