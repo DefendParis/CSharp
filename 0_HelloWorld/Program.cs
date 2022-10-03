@@ -23,8 +23,6 @@ void text1(string text, int time = 1)
 
 //These voids is for writing one character at a time at differnt speeds
 
-goto test;
-
 text("Hello Chosen One");
 
 text("\nDo you wanna go on an adventure? \n");
@@ -114,8 +112,6 @@ while(loop) {
 
 #region third clear
 
-test:
-
 text("So the Matrix have found us, now you will have to roll a dice\n");
 Thread.Sleep(200);
 text("\nIf you roll a six, i can get you safely away. Any other number i can't guarantee your safety\n");
@@ -140,7 +136,7 @@ int rand_rum = rd.Next(1,7);
     
 if (rand_rum == 6)
     {
-        text("\nWell the computer really like you huh\n");
+        text("\nWell the computer really likes you huh\n");
         Thread.Sleep(400);
     }
 else 
